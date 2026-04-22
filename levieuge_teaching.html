@@ -1,0 +1,239 @@
+<\!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grégory Levieuge – Teaching</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100}
+.nav-name{font-family:'EB Garamond',serif;font-size:22px;letter-spacing:.02em}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#888}
+.nav-links a:hover,.nav-links a.active{color:#222}
+.nav-links a.active{border-bottom:1px solid #222;padding-bottom:2px}
+
+/* HERO */
+.hero{position:relative;height:340px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:brightness(.62)}
+.hero-overlay{position:absolute;bottom:2.4rem;left:3rem}
+.hero-title{font-family:'EB Garamond',serif;font-size:64px;font-weight:400;color:#fff;line-height:1.05}
+.hero-sub{font-size:13.5px;color:rgba(255,255,255,.75);letter-spacing:.08em;text-transform:uppercase;margin-top:.6rem}
+.photo-credit{position:absolute;bottom:.45rem;right:.9rem;font-size:10px;color:rgba(255,255,255,.4)}
+
+/* LAYOUT */
+.wrapper{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.main{display:grid;grid-template-columns:1fr 290px;gap:3.5rem;padding:3rem 0}
+
+/* INTRO */
+.intro-text{font-family:'EB Garamond',serif;font-size:19px;line-height:1.82;color:#222;margin-bottom:2.5rem}
+
+/* SECTIONS */
+.section-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;border-top:1px solid #eee;padding-top:1.1rem;margin:2.2rem 0 1rem}
+
+/* COURSES */
+.course{padding:.9rem 0;border-bottom:1px solid #f0f0f0}
+.course:last-child{border-bottom:none}
+.course-title{font-size:15.5px;color:#222;line-height:1.5;font-weight:500}
+.course-meta{font-size:13px;color:#aaa;margin-top:4px;letter-spacing:.02em}
+.course-note{font-size:13px;color:#888;margin-top:4px;font-style:italic}
+
+/* COURSE CHIPS */
+.topic-list{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem;padding-top:.4rem}
+.topic-list li{font-size:13.5px;background:#f6f6f6;border:1px solid #ececec;letter-spacing:.01em;transition:background .15s,border-color .15s,color .15s}
+.topic-list li a{display:block;padding:.35rem .75rem;color:#333}
+.topic-list li:hover{background:#eef2f8;border-color:#c9d7e8}
+.topic-list li:hover a{color:#1a5fa8}
+.course-chip-row{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding-top:.4rem}
+.course-chip-row .topic-list{padding-top:0}
+.course-meta-inline{font-size:13px;color:#aaa;letter-spacing:.02em}
+
+/* SIDEBAR */
+.sidebar-card{border:1px solid #eee;padding:1.3rem 1.4rem;margin-bottom:1.5rem;background:#fafafa}
+.card-title{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;margin-bottom:1rem}
+.slink{display:flex;align-items:center;gap:.6rem;font-size:14px;color:#1a5fa8;margin-bottom:.65rem}
+.slink svg{flex-shrink:0}
+.cv-btn{display:block;width:100%;padding:.65rem 1rem;background:#222;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:.9rem;font-family:'DM Sans',sans-serif;cursor:pointer}
+.cv-btn:hover{background:#444}
+.contact-line{font-size:14px;color:#555;line-height:1.9}
+
+/* FOOTER */
+footer{border-top:1px solid #eee;padding:1.5rem 0 2.5rem}
+.disclaimer{font-size:12.5px;color:#bbb;line-height:1.75;font-style:italic}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav{padding:.9rem 1.2rem}
+  .nav-name{font-size:18px}
+  .nav-links{gap:1.1rem}
+  .nav-links a{font-size:11px}
+
+  .hero{height:220px}
+  .hero-overlay{bottom:1.4rem;left:1.4rem}
+  .hero-title{font-size:36px}
+  .hero-sub{font-size:11px;margin-top:.35rem}
+
+  .wrapper{padding:0 1.2rem}
+  .main{grid-template-columns:1fr;gap:0;padding:1.8rem 0}
+
+  aside{margin-top:1rem}
+  .disclaimer{font-size:12px}
+}
+
+@media (max-width: 480px) {
+  .hero-title{font-size:28px}
+  .hero{height:190px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Grégory Levieuge</span>
+  <div class="nav-links">
+    <a href="levieuge_homepage.html">Home</a>
+    <a href="levieuge_research.html">Research</a>
+    <a href="levieuge_policy.html">Policy</a>
+    <a href="#" class="active">Teaching</a>
+    <a href="levieuge_supervision.html">Supervision</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <img src="Photos pour le site/Photo_classe.jpg" alt="Teaching">
+  <div class="hero-overlay">
+    <div class="hero-title">Teaching</div>
+    <div class="hero-sub">Courses &amp; Materials</div>
+  </div>
+  <span class="photo-credit">&copy; G. Levieuge</span>
+</div>
+
+<div class="wrapper">
+  <div class="main">
+
+    <main>
+
+      <p class="intro-text">Over the past two decades, I have taught a broad range of courses in macroeconomics, monetary and banking theory, econometrics and finance, at both undergraduate and graduate levels, in different universities.</p>
+
+      <div class="section-label" id="current">Current Course — Université Paris Nanterre</div>
+      <div class="course-chip-row">
+        <ul class="topic-list"><li><a href="#">Growth and Fluctuations (Master 2)</a></li></ul>
+        <span class="course-meta-inline">Slides coming soon</span>
+      </div>
+
+      <div class="section-label" id="orleans">Past Courses — University of Orléans</div>
+      <ul class="topic-list">
+        <li><a href="#">Business Cycles</a></li>
+        <li><a href="#">Monetary and Banking Theory</a></li>
+        <li><a href="#">Monetary Theory</a></li>
+        <li><a href="#">Monetary Policy</a></li>
+        <li><a href="#">Economic and Financial Environment</a></li>
+        <li><a href="#">Applied Econometric Time Series</a></li>
+        <li><a href="#">Financial Econometrics</a></li>
+        <li><a href="#">Microeconomics</a></li>
+        <li><a href="#">Macroeconomics</a></li>
+        <li><a href="#">Introductory Finance</a></li>
+      </ul>
+
+      <div class="section-label" id="paris1">Past Courses — Université Paris 1 Panthéon-Sorbonne</div>
+      <div class="course-chip-row">
+        <ul class="topic-list"><li><a href="#">Research and Methodology</a></li></ul>
+        <span class="course-meta-inline">Graduate · 2022–2023</span>
+      </div>
+
+      <div class="section-label" id="bordeaux">Past Courses — Bordeaux School of Economics</div>
+      <div class="course-chip-row">
+        <ul class="topic-list"><li><a href="#">Greenflation</a></li></ul>
+        <span class="course-meta-inline">Graduate · 2022</span>
+      </div>
+
+      <div class="section-label" id="skema">Past Courses — Skema Business School</div>
+      <div class="course-chip-row">
+        <ul class="topic-list"><li><a href="#">Advanced Economics</a></li></ul>
+        <span class="course-meta-inline">Undergraduate · 2010–2013</span>
+      </div>
+
+    </main>
+
+    <aside>
+      <div class="sidebar-card">
+        <div class="card-title">On this page</div>
+        <a class="slink" href="#current">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Current Course
+        </a>
+        <a class="slink" href="#orleans">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7-3 7 3"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v3"/><path d="M12 14v3"/><path d="M16 14v3"/></svg>
+          University of Orléans
+        </a>
+        <a class="slink" href="#paris1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Paris 1 Panthéon-Sorbonne
+        </a>
+        <a class="slink" href="#bordeaux">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Bordeaux School of Economics
+        </a>
+        <a class="slink" href="#skema">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Skema Business School
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Profiles</div>
+        <a class="slink" href="https://scholar.google.com/citations?user=jn9z0EQAAAAJ&hl=fr" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          Google Scholar
+        </a>
+        <a class="slink" href="https://ideas.repec.org/f/ple354.html" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          IDEAS / RePec
+        </a>
+        <a class="slink" href="https://orcid.org/0000-0003-2152-0737" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          ORCID
+        </a>
+        <a class="slink" href="https://www.banque-france.fr/en/gregory-levieuge" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Banque de France page
+        </a>
+        <a class="cv-btn" href="CV_Levieuge_April26.pdf" target="_blank">Download CV (PDF)</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Navigate</div>
+        <a class="slink" href="levieuge_homepage.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Home
+        </a>
+        <a class="slink" href="levieuge_research.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Research
+        </a>
+        <a class="slink" href="levieuge_policy.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Policy
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Contact</div>
+        <div class="contact-line">gregorylevieuge at gmail dot com</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p class="disclaimer">Disclaimer: views expressed on this page and in the posted documents are my own and do not necessarily represent those of the Banque de France or the Eurosystem.</p>
+  </footer>
+</div>
+
+</body>
+</html>

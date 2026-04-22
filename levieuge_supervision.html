@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grégory Levieuge – PhD Supervision & Juries</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100}
+.nav-name{font-family:'EB Garamond',serif;font-size:22px;letter-spacing:.02em}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#888}
+.nav-links a:hover,.nav-links a.active{color:#222}
+.nav-links a.active{border-bottom:1px solid #222;padding-bottom:2px}
+
+/* HERO */
+.hero{position:relative;height:340px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.62)}
+.photo-credit{position:absolute;bottom:.45rem;right:.9rem;font-size:10px;color:rgba(255,255,255,.4)}
+.hero-overlay{position:absolute;bottom:2rem;left:3rem}
+.hero-title{font-family:'EB Garamond',serif;font-size:56px;font-weight:400;color:#fff;line-height:1.05}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.78);letter-spacing:.08em;text-transform:uppercase;margin-top:.55rem}
+
+/* LAYOUT */
+.wrapper{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.main{display:grid;grid-template-columns:1fr 290px;gap:3.5rem;padding:3rem 0}
+
+/* INTRO */
+.intro-text{font-family:'EB Garamond',serif;font-size:19px;line-height:1.82;color:#222;margin-bottom:2.5rem}
+
+/* SECTIONS */
+.section-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;border-top:1px solid #eee;padding-top:1.1rem;margin:2.2rem 0 1rem}
+
+/* PHD ENTRIES */
+.phd{padding:.9rem 0;border-bottom:1px solid #f0f0f0}
+.phd:last-child{border-bottom:none}
+.phd-name{font-size:15.5px;color:#222;font-weight:500;letter-spacing:.01em}
+.phd-topic{font-size:15px;color:#333;line-height:1.5;margin-top:2px}
+.phd-meta{font-size:13px;color:#aaa;margin-top:4px;letter-spacing:.02em}
+.phd-badge{display:inline-block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:#eaf2fb;color:#1a5fa8;padding:2px 8px;border-radius:2px;margin-left:.6rem;vertical-align:2px}
+.phd-badge.ongoing{background:#f1f7ee;color:#3e7a2e}
+
+/* JURY ENTRIES (compact) */
+.jury{padding:.55rem 0;border-bottom:1px solid #f4f4f4;display:grid;grid-template-columns:92px 1fr;gap:1rem;align-items:baseline}
+.jury:last-child{border-bottom:none}
+.jury-date{font-size:12.5px;color:#aaa;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.jury-body{font-size:14.5px;color:#333;line-height:1.5}
+.jury-name{font-weight:500;color:#222}
+.jury-topic{color:#333}
+.jury-place{color:#888;font-size:13.5px}
+
+/* SIDEBAR */
+.sidebar-card{border:1px solid #eee;padding:1.3rem 1.4rem;margin-bottom:1.5rem;background:#fafafa}
+.card-title{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;margin-bottom:1rem}
+.slink{display:flex;align-items:center;gap:.6rem;font-size:14px;color:#1a5fa8;margin-bottom:.65rem}
+.slink svg{flex-shrink:0}
+.cv-btn{display:block;width:100%;padding:.65rem 1rem;background:#222;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:.9rem;font-family:'DM Sans',sans-serif;cursor:pointer}
+.cv-btn:hover{background:#444}
+.contact-line{font-size:14px;color:#555;line-height:1.9}
+
+/* FOOTER */
+footer{border-top:1px solid #eee;padding:1.5rem 0 2.5rem}
+.disclaimer{font-size:12.5px;color:#bbb;line-height:1.75;font-style:italic}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav{padding:.9rem 1.2rem}
+  .nav-name{font-size:18px}
+  .nav-links{gap:1.1rem}
+  .nav-links a{font-size:11px}
+
+  .hero{height:150px}
+  .hero-overlay{bottom:1.2rem;left:1.4rem}
+  .hero-title{font-size:32px}
+  .hero-sub{font-size:11px;margin-top:.35rem}
+
+  .wrapper{padding:0 1.2rem}
+  .main{grid-template-columns:1fr;gap:0;padding:1.8rem 0}
+
+  aside{margin-top:1rem}
+  .jury{grid-template-columns:1fr;gap:.1rem}
+  .disclaimer{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Grégory Levieuge</span>
+  <div class="nav-links">
+    <a href="levieuge_homepage.html">Home</a>
+    <a href="levieuge_research.html">Research</a>
+    <a href="levieuge_policy.html">Policy</a>
+    <a href="levieuge_teaching.html">Teaching</a>
+    <a href="#" class="active">Supervision</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <img src="Photos pour le site/Photo_Supervision.JPG" alt="Supervision">
+  <div class="hero-overlay">
+    <div class="hero-title">PhD Supervision &amp; Jury Committees</div>
+    <div class="hero-sub">Doctoral &middot; Habilitation</div>
+  </div>
+  <span class="photo-credit">&copy; G. Levieuge</span>
+</div>
+
+<div class="wrapper">
+  <div class="main">
+
+    <main>
+
+      <p class="intro-text">Over the years, I have supervised PhD students and served on PhD and Habilitation (HDR) jury committees. Supervised work spans monetary policy, financial stability, macroprudential regulation, fiscal policy, and the macroeconomic dimensions of environmental and energy transition.</p>
+
+      <div class="section-label" id="ongoing">Ongoing PhD Supervision</div>
+
+      <div class="phd">
+        <div class="phd-name">Marie JEZEQUEL-ROYER <span class="phd-badge ongoing">In progress</span></div>
+        <div class="phd-topic">Assessing the Inflationary Effects of the Environmental and Energy Transition</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with C. Turcu and S. Bacouel-Jentjens</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Maéva SILVESTRINI <span class="phd-badge ongoing">In progress</span></div>
+        <div class="phd-topic">Spillover Effects of Unconventional Monetary Policies</div>
+        <div class="phd-meta">Université Paris Dauphine &middot; co-direction with F. Tripier</div>
+      </div>
+
+      <div class="section-label" id="defended">Completed PhD Supervision</div>
+
+      <div class="phd">
+        <div class="phd-name">Leo Spencer KEUNGNE <span class="phd-badge">Defended 2025</span></div>
+        <div class="phd-topic">Essays on BEAC Monetary Policy</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with J-P. Pollin &middot; defense 29 Jan 2025</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">José RIASCOS <span class="phd-badge">Defended 2024</span></div>
+        <div class="phd-topic">Environment, Natural Resources and Inequalities: The Role of Economic Policies</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with C. Turcu and S. Bacouel-Jentjens &middot; defense 20 Dec 2024</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Pauline AVRIL <span class="phd-badge">Defended 2023</span></div>
+        <div class="phd-topic">Essays on Natural Disasters and Financial Instability</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with C. Turcu &middot; defense 11 Dec 2023</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">José GARCIA <span class="phd-badge">Defended 2021</span></div>
+        <div class="phd-topic">Essays on the Interactions between Monetary and Macroprudential Policies</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with Y. Lucotte &middot; defense 26 Nov 2021</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Florian PRADINES <span class="phd-badge">Defended 2019</span></div>
+        <div class="phd-topic">Essays on the Impact of the Framework and the Stance of Macroeconomic Policies on Financial Stability</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; defense 4 Oct 2019 &middot; now Assistant Professor, Paris School of Business</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Kawther ALIMI <span class="phd-badge">Defended 2019</span></div>
+        <div class="phd-topic">Essays on the Monetary Policy in Tunisia: A DSGE Model Analysis</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &amp; University of Sfax &middot; defense 15 Jul 2019</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Marie-Pierre HORY <span class="phd-badge">Defended 2017</span></div>
+        <div class="phd-topic">Essays on Fiscal Policy: Fiscal Multipliers and Fiscal Interactions</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; defense 1 Dec 2017 &middot; now Researcher &amp; Teaching Manager, ISC Paris</div>
+      </div>
+
+      <div class="phd">
+        <div class="phd-name">Désiré KANGA <span class="phd-badge">Defended 2017</span></div>
+        <div class="phd-topic">The Impact of Unconventional Monetary Policies in Europe</div>
+        <div class="phd-meta">Université d&rsquo;Orléans &middot; co-direction with P. Villieu &middot; defense 25 Jan 2017 &middot; now Economist at the IMF, Washington</div>
+      </div>
+
+      <div class="section-label" id="phd-jury">PhD Jury Committees</div>
+
+      <div class="jury"><div class="jury-date">16 Oct 2025</div><div class="jury-body"><span class="jury-name">Béringer GLOGLO</span> — <span class="jury-topic">Monetary Policy Viability in Monetary Union: The Case of WAEMU</span>. <span class="jury-place">Univ. Angers (GRANEM)</span></div></div>
+      <div class="jury"><div class="jury-date">10 Jul 2025</div><div class="jury-body"><span class="jury-name">Pablo AGUILAR PEREZ</span> — <span class="jury-topic">Monetary Policy, Financial Instability, and Multilateral Governance</span>. <span class="jury-place">Univ. Paris Nanterre (EconomiX)</span></div></div>
+      <div class="jury"><div class="jury-date">16 Dec 2024</div><div class="jury-body"><span class="jury-name">Hamdi JBIR</span> — <span class="jury-topic">Monetary Policy and Macroprudential Regulation: What Impact on Financial Stability?</span>. <span class="jury-place">Univ. Poitiers (CRIEF)</span></div></div>
+      <div class="jury"><div class="jury-date">22 Nov 2024</div><div class="jury-body"><span class="jury-name">Théo LAMAGNERE</span> — <span class="jury-topic">Emerging Countries, Monetary Policy Autonomy and Foreign Exchange Reserve Dynamics</span>. <span class="jury-place">Univ. Bordeaux (BSE)</span></div></div>
+      <div class="jury"><div class="jury-date">20 Nov 2024</div><div class="jury-body"><span class="jury-name">Manlan NGORAM</span> — <span class="jury-topic">Regulating Financial Cycles in the Euro Area: What Role for Macroprudential Policy?</span>. <span class="jury-place">Univ. Grenoble (CREG)</span></div></div>
+      <div class="jury"><div class="jury-date">12 Jan 2024</div><div class="jury-body"><span class="jury-name">Inessa BENCHORA</span> — <span class="jury-topic">The Impact of Transition Risk on Stock Returns</span>. <span class="jury-place">Univ. d&rsquo;Orléans</span></div></div>
+      <div class="jury"><div class="jury-date">30 Nov 2023</div><div class="jury-body"><span class="jury-name">Katja SCHMIDT</span> — <span class="jury-topic">Fiscal Policy, Spillovers and Inflation in the Euro Area</span>. <span class="jury-place">Univ. Lille</span></div></div>
+      <div class="jury"><div class="jury-date">3 Oct 2023</div><div class="jury-body"><span class="jury-name">Raphaël CARDOT-MARTIN</span> — <span class="jury-topic">Macroprudential Policies and their Links with Monetary Policy in the European Union</span>. <span class="jury-place">Univ. Besançon (CRESE)</span></div></div>
+      <div class="jury"><div class="jury-date">10 Jul 2023</div><div class="jury-body"><span class="jury-name">Corentin ROUSSEL</span> — <span class="jury-topic">Credit Risk Regulation in Basel 3: A DSGE Approach in the Eurozone</span>. <span class="jury-place">Univ. Bordeaux (BSE)</span></div></div>
+      <div class="jury"><div class="jury-date">4 Jan 2023</div><div class="jury-body"><span class="jury-name">Hugo ORIOLA</span> — <span class="jury-topic">Political Monetary Cycles: How does Central Bank Action impact National Politics?</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+      <div class="jury"><div class="jury-date">16 Jun 2021</div><div class="jury-body"><span class="jury-name">Evrard Ulrich MOUNKALA</span> — <span class="jury-topic">Nominal Rigidities, Core Inflation and Growth in the CEMAC</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+      <div class="jury"><div class="jury-date">26 May 2021</div><div class="jury-body"><span class="jury-name">Pierre LESUISSE</span> — <span class="jury-topic">From Economic Transition to the Monetary Union: Empirical Elements regarding the CEECs</span>. <span class="jury-place">Univ. Clermont Auvergne (CERDI)</span></div></div>
+      <div class="jury"><div class="jury-date">11 Dec 2020</div><div class="jury-body"><span class="jury-name">Sullivan HUÉ</span> — <span class="jury-topic">Four Essays on Financial Risk Measurement</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+      <div class="jury"><div class="jury-date">26 Nov 2020</div><div class="jury-body"><span class="jury-name">Alexandra CAMPMAS</span> — <span class="jury-topic">Institutional Environment and Bank Behaviour</span>. <span class="jury-place">Univ. Bordeaux (Larefi)</span></div></div>
+      <div class="jury"><div class="jury-date">4 Sep 2020</div><div class="jury-body"><span class="jury-name">Pegdéwendé Nestor SAWADOGO</span> — <span class="jury-topic">Fiscal Policy and Financing for Development in Developing Countries</span>. <span class="jury-place">Univ. Clermont Auvergne (CERDI)</span></div></div>
+      <div class="jury"><div class="jury-date">9 Jun 2020</div><div class="jury-body"><span class="jury-name">Melchidédek Joslem NGAMBOU DJATCHE</span> — <span class="jury-topic">Financial Stability and Coordination of Economic Policies</span>. <span class="jury-place">Univ. Côte d&rsquo;Azur (GREDEG-CNRS)</span></div></div>
+      <div class="jury"><div class="jury-date">7 Dec 2018</div><div class="jury-body"><span class="jury-name">Marine SALÈS</span> — <span class="jury-topic">Financial Frictions and Labor Market</span>. <span class="jury-place">Univ. Paris-Saclay (ENS Paris-Saclay)</span></div></div>
+      <div class="jury"><div class="jury-date">22 May 2018</div><div class="jury-body"><span class="jury-name">Maxime LAMANDÉ</span> — <span class="jury-topic">Regulation of International Financial Flows and Macroprudential Policy</span>. <span class="jury-place">Univ. Rennes 1 (CREM)</span></div></div>
+      <div class="jury"><div class="jury-date">8 Dec 2016</div><div class="jury-body"><span class="jury-name">Thomas COUDERT</span> — <span class="jury-topic">Essays on the Labor Market in Macroeconomics</span>. <span class="jury-place">Univ. Strasbourg (LARGE)</span></div></div>
+      <div class="jury"><div class="jury-date">17 Dec 2015</div><div class="jury-body"><span class="jury-name">Hadi KHALIL</span> — <span class="jury-topic">The Banking Liquidity in the Transmission and Amplification of the Financial Crisis: The Case of the European Banking Sector</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+      <div class="jury"><div class="jury-date">4 Dec 2015</div><div class="jury-body"><span class="jury-name">Salim DEHMEJ</span> — <span class="jury-topic">Essays on Central Banking and Macroprudential Policy</span>. <span class="jury-place">Univ. Paris 1 Panthéon-Sorbonne</span></div></div>
+      <div class="jury"><div class="jury-date">11 Dec 2014</div><div class="jury-body"><span class="jury-name">Baher Ibrahim ELGAHRY</span> — <span class="jury-topic">La synchronisation des cycles économiques entre pays avancés et pays émergents : couplage ou découplage ?</span>. <span class="jury-place">Univ. du Havre</span></div></div>
+      <div class="jury"><div class="jury-date">2 Dec 2009</div><div class="jury-body"><span class="jury-name">Cristina SEMENESCU</span> — <span class="jury-topic">Macroeconomic Policies and Regional Divergences in the Euro Area</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+      <div class="jury"><div class="jury-date">6 May 2009</div><div class="jury-body"><span class="jury-name">Nelly GREGORIADIS</span> — <span class="jury-topic">Monetary Policy and Heterogeneity of the Euro Area</span>. <span class="jury-place">Univ. d&rsquo;Orléans (LEO)</span></div></div>
+
+      <div class="section-label" id="hdr-jury">Habilitation (HDR) Jury Committees</div>
+
+      <div class="jury"><div class="jury-date">30 Jun 2023</div><div class="jury-body"><span class="jury-name">Fabien LABONDANCE</span> — <span class="jury-topic">Contributions to the Analysis of the European Monetary Union</span>. <span class="jury-place">Univ. Bourgogne Franche-Comté</span></div></div>
+      <div class="jury"><div class="jury-date">16 Mar 2023</div><div class="jury-body"><span class="jury-name">Maxime MENUET</span> — <span class="jury-topic">Economic Growth, Political Economy, and History: A Long-run Perspective</span>. <span class="jury-place">Univ. Paris 8</span></div></div>
+      <div class="jury"><div class="jury-date">27 May 2021</div><div class="jury-body"><span class="jury-name">Hamza BENNANI</span> — <span class="jury-topic">Central Banking in the Context of the Post-Great Financial Crisis</span>. <span class="jury-place">Univ. Paris 10 (EconomiX)</span></div></div>
+      <div class="jury"><div class="jury-date">6 Jul 2015</div><div class="jury-body"><span class="jury-name">Emmanuel CARRÉ</span> — <span class="jury-topic">The Consequences of the Global Financial Crisis for Monetary Policy</span>. <span class="jury-place">Univ. Paris 13 (CEPN)</span></div></div>
+
+    </main>
+
+    <aside>
+      <div class="sidebar-card">
+        <div class="card-title">On this page</div>
+        <a class="slink" href="#ongoing">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Ongoing Supervision
+        </a>
+        <a class="slink" href="#defended">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Completed Supervision
+        </a>
+        <a class="slink" href="#phd-jury">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          PhD Committee
+        </a>
+        <a class="slink" href="#hdr-jury">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M22 11V3h-7l-.8 1.6L8 4l-2 2v6a4 4 0 0 0 4 4h4l4 4v-4a4 4 0 0 0 4-4z"/></svg>
+          Habilitation Committee
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Profiles</div>
+        <a class="slink" href="https://scholar.google.com/citations?user=jn9z0EQAAAAJ&hl=fr" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          Google Scholar
+        </a>
+        <a class="slink" href="https://ideas.repec.org/f/ple354.html" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          IDEAS / RePec
+        </a>
+        <a class="slink" href="https://orcid.org/0000-0003-2152-0737" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          ORCID
+        </a>
+        <a class="slink" href="https://www.banque-france.fr/en/gregory-levieuge" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Banque de France page
+        </a>
+        <a class="cv-btn" href="CV_Levieuge_April26.pdf" target="_blank">Download CV (PDF)</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Navigate</div>
+        <a class="slink" href="levieuge_homepage.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Home
+        </a>
+        <a class="slink" href="levieuge_research.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Research
+        </a>
+        <a class="slink" href="levieuge_policy.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Policy
+        </a>
+        <a class="slink" href="levieuge_teaching.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Teaching
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Contact</div>
+        <div class="contact-line">gregorylevieuge at gmail dot com</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p class="disclaimer">Disclaimer: views expressed on this page and in the posted documents are my own and do not necessarily represent those of the Banque de France or the Eurosystem.</p>
+  </footer>
+</div>
+
+</body>
+</html>

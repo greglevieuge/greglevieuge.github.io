@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grégory Levieuge – Research</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100}
+.nav-name{font-family:'EB Garamond',serif;font-size:22px;letter-spacing:.02em}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#888}
+.nav-links a:hover,.nav-links a.active{color:#222}
+.nav-links a.active{border-bottom:1px solid #222;padding-bottom:2px}
+
+/* HERO PHOTO */
+.hero{position:relative;height:260px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 50%;filter:brightness(.62)}
+.hero-overlay{position:absolute;bottom:2rem;left:3rem}
+.hero-title{font-family:'EB Garamond',serif;font-size:56px;font-weight:400;color:#fff;line-height:1.05}
+.hero-sub{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem}
+.photo-credit{position:absolute;bottom:.45rem;right:.9rem;font-size:10px;color:rgba(255,255,255,.35)}
+
+/* LAYOUT */
+.wrapper{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.main{display:grid;grid-template-columns:1fr 290px;gap:3.5rem;padding:3rem 0}
+
+/* CURRENT WORK BANNER */
+.current-work{background:#f7f9fc;border-left:3px solid #1a5fa8;padding:1.4rem 1.6rem;margin-bottom:2.8rem}
+.current-work-label{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#1a5fa8;margin-bottom:.9rem;font-weight:500}
+.cw-item{padding:.55rem 0;border-bottom:1px solid #e8eef6}
+.cw-item:last-child{border-bottom:none;padding-bottom:0}
+.cw-title{font-family:'EB Garamond',serif;font-size:16.5px;color:#222;line-height:1.45}
+.cw-title a{color:#222;border-bottom:1px solid transparent;transition:border-color .15s}
+.cw-title a:hover{border-bottom-color:#1a5fa8;color:#1a5fa8}
+.cw-meta{font-size:12.5px;color:#888;margin-top:.2rem}
+.cw-status{font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;display:inline-block;margin-top:.3rem;color:#666;background:#ebebeb}
+
+/* SECTION LABEL */
+.section-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;border-top:1px solid #eee;padding-top:1.1rem;margin:2.5rem 0 1.2rem}
+
+/* PUBLICATION ITEM */
+.pub-item{padding:.75rem 0;border-bottom:1px solid #f0f0f0;display:flex;gap:1rem;align-items:flex-start}
+.pub-item:last-child{border-bottom:none}
+.pub-body{flex:1}
+.pub-title{font-family:'EB Garamond',serif;font-size:17px;color:#222;line-height:1.5}
+.pub-title a{color:#222;border-bottom:1px solid transparent;transition:border-color .15s}
+.pub-title a:hover{border-bottom-color:#1a5fa8;color:#1a5fa8}
+.pub-meta{font-size:13px;color:#888;margin-top:.25rem;line-height:1.5}
+.pub-meta em{font-style:italic;color:#666}
+.pub-badge{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#1a5fa8;background:#eef3fb;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:4px;align-self:flex-start}
+
+/* WORKING PAPERS */
+.wp-item{padding:.75rem 0;border-bottom:1px solid #f0f0f0}
+.wp-item:last-child{border-bottom:none}
+.wp-title{font-family:'EB Garamond',serif;font-size:17px;line-height:1.5}
+.wp-title a{color:#222;border-bottom:1px solid transparent;transition:border-color .15s}
+.wp-title a:hover{border-bottom-color:#1a5fa8;color:#1a5fa8}
+.wp-meta{font-size:13px;color:#888;margin-top:.25rem}
+.wp-status.submitted{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#c17700;background:#fdf6e3;padding:2px 8px;display:inline-block;vertical-align:middle}
+
+/* BOOK CHAPTERS */
+.chapter-item{padding:.75rem 0;border-bottom:1px solid #f0f0f0}
+.chapter-item:last-child{border-bottom:none}
+
+/* SIDEBAR */
+.sidebar-card{border:1px solid #eee;padding:1.3rem 1.4rem;margin-bottom:1.5rem;background:#fafafa}
+.card-title{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;margin-bottom:1rem}
+.slink{display:flex;align-items:center;gap:.6rem;font-size:14px;color:#1a5fa8;margin-bottom:.65rem}
+.slink svg{flex-shrink:0}
+.cv-btn{display:block;width:100%;padding:.65rem 1rem;background:#222;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:.9rem;font-family:'DM Sans',sans-serif;cursor:pointer}
+.cv-btn:hover{background:#444}
+
+/* JUMP NAV */
+.jump-nav{display:flex;flex-direction:column;gap:.4rem}
+.jump-nav a{font-size:13px;color:#1a5fa8;display:flex;align-items:center;gap:.5rem}
+.jump-nav a::before{content:"→";font-size:11px;color:#aaa}
+.jump-nav a:hover{color:#222}
+
+/* FOOTER */
+footer{border-top:1px solid #eee;padding:1.5rem 0 2.5rem}
+.disclaimer{font-size:12.5px;color:#bbb;line-height:1.75;font-style:italic}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  nav{padding:.9rem 1.2rem}
+  .nav-name{font-size:18px}
+  .nav-links{gap:1.1rem}
+  .nav-links a{font-size:11px}
+  .hero{height:190px}
+  .hero-overlay{bottom:1.2rem;left:1.4rem}
+  .hero-title{font-size:34px}
+  .hero-sub{font-size:11px}
+  .wrapper{padding:0 1.2rem}
+  .main{grid-template-columns:1fr;gap:0;padding:1.8rem 0}
+  aside{margin-top:1.5rem}
+}
+@media (max-width:480px){
+  .hero-title{font-size:26px}
+  .hero{height:160px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Grégory Levieuge</span>
+  <div class="nav-links">
+    <a href="levieuge_homepage.html">Home</a>
+    <a href="#" class="active">Research</a>
+    <a href="levieuge_policy.html">Policy</a>
+    <a href="levieuge_teaching.html">Teaching</a>
+    <a href="levieuge_supervision.html">Supervision</a>
+  </div>
+</nav>
+
+<!-- HERO PHOTO -->
+<div class="hero">
+  <img src="Photos pour le site/IMG_0871.jpg" alt="">
+  <div class="hero-overlay">
+    <div class="hero-title">Research</div>
+    <div class="hero-sub">Publications · Working Papers · Book Chapters</div>
+  </div>
+  <div class="photo-credit">© G. Levieuge</div>
+</div>
+
+<div class="wrapper">
+  <div class="main">
+
+    <main>
+
+      <!-- CURRENT WORK — en haut, mis en valeur -->
+      <div class="current-work" id="current">
+        <div class="current-work-label">Current work</div>
+
+        <div class="cw-item">
+          <div class="cw-title">
+            <a href="https://ssrn.com/abstract=5050773" target="_blank">Going Green: Will the R-star Shine Brighter?</a>
+          </div>
+          <div class="cw-meta">SSRN, 2026 &mdash; with M. Jezequel-Royer</div>
+        </div>
+
+        <div class="cw-item">
+          <div class="cw-title">Greenflation and Climateflation Expectations</div>
+          <div class="cw-meta">with P. Hubert, M. Jezequel-Royer</div>
+          <span class="cw-status">Work in progress</span>
+        </div>
+
+        <div class="cw-item">
+          <div class="cw-title">Residential Mortgage-Backed Securities Transition Risk</div>
+          <div class="cw-meta">with M. Barthes, Y. Bouzidi</div>
+          <span class="cw-status">Work in progress</span>
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="section-label" id="publications">Publications in peer-reviewed journals</div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/mac.20240046" target="_blank">Environmental Subsidy to Mitigate Net-Zero Transition Costs</a></div>
+          <div class="pub-meta"><em>American Economic Journal: Macroeconomics</em>, 2026 &mdash; with E. Jondeau, J.-G. Sahuc, G. Vermandel</div>
+        </div>
+        <div class="pub-badge">Forthcoming</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921800926000376" target="_blank">Sustainable Development and the Mining Industry: the Mexican Case</a></div>
+          <div class="pub-meta"><em>Ecological Economics</em>, 2026 &mdash; with S. Bacouel-Jentjens, J. Riascos, C. Turcu</div>
+        </div>
+        <div class="pub-badge">Forthcoming</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0261560625001767" target="_blank">Revisiting 15 Years of Unusual Monetary Policies across the Atlantic</a></div>
+          <div class="pub-meta"><em>Journal of International Money and Finance</em>, Vol. 159, 2025 &mdash; with J. Garcia Revelo, J.-G. Sahuc</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0261560625000658" target="_blank">Doubling Down: The Synergy of CCyB Release and Monetary Policy Easing</a></div>
+          <div class="pub-meta"><em>Journal of International Money and Finance</em>, Vol. 155, 2025 &mdash; with C. Jude</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0261560625000609" target="_blank">Natural Disasters and Financial Stress: Can Prudential Regulation Tame Green Swans?</a></div>
+          <div class="pub-meta"><em>Journal of International Money and Finance</em>, Vol. 154, 2025 &mdash; with P. Avril, C. Turcu</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S2110701723000707" target="_blank">The Fiscal Multiplier when Debt is Denominated in Foreign Currency</a></div>
+          <div class="pub-meta"><em>International Economics</em>, Vol. 176, 2023 &mdash; with M.-P. Hory, D. Onori</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0378426622000838" target="_blank">When could Macroprudential and Monetary Policies be in Conflict?</a></div>
+          <div class="pub-meta"><em>Journal of Banking &amp; Finance</em>, Vol. 139, 2022 &mdash; with J. Garcia Revelo</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0014292121001380" target="_blank">Downward Interest Rate Rigidity</a></div>
+          <div class="pub-meta"><em>European Economic Review</em>, Vol. 137, 2021 &mdash; with J.-G. Sahuc</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0261560621000644" target="_blank">Public Spending, Currency Mismatch and Financial Frictions</a></div>
+          <div class="pub-meta"><em>Journal of International Money and Finance</em>, Vol. 116, 2021 &mdash; with M.-P. Hory, D. Onori</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0261560620302461" target="_blank">The Cost of Banking Crises: Does the Policy Framework Matter?</a></div>
+          <div class="pub-meta"><em>Journal of International Money and Finance</em>, Vol. 110, 2021 &mdash; with Y. Lucotte, F. Pradines-Jobet</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-d-economie-politique-2020-2-page-231.htm" target="_blank">How did Unconventional Monetary Policies Impact Market Expectations?</a></div>
+          <div class="pub-meta"><em>Revue d'Économie Politique</em>, Vol. 130(2), 2020 &mdash; with D. Kanga</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1572308916302509" target="_blank">Central Banks' Preferences and Banking Sector Vulnerability</a></div>
+          <div class="pub-meta"><em>Journal of Financial Stability</em>, Vol. 40, 2019 &mdash; with Y. Lucotte, F. Pradines-Jobet</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://shs.cairn.info/revue-francaise-d-economie-2018-3-page-63?lang=fr" target="_blank">La politique monétaire doit-elle être utilisée à des fins de stabilité financière ?</a></div>
+          <div class="pub-meta"><em>Revue Française d'Économie</em>, Vol. XXXIII, 2019</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://link.springer.com/article/10.1007%2Fs10290-018-0308-6" target="_blank">Central Bank Credibility and the Expectations Channel: Evidence Based on a New Credibility Index</a></div>
+          <div class="pub-meta"><em>Review of World Economics</em>, Vol. 154(3), 2019 &mdash; with Y. Lucotte, S. Ringuede</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0165188917302348" target="_blank">Monetary Policy and Long-run Systemic Risk-Taking</a></div>
+          <div class="pub-meta"><em>Journal of Economic Dynamics and Control</em>, Vol. 86, 2018 &mdash; with G. Colletaz, A. Popescu</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/10.1111/twec.12402" target="_blank">Growth Effect of FDI in Developing Countries: The Role of Institutional Quality</a></div>
+          <div class="pub-meta"><em>The World Economy</em>, Vol. 40(4), 2017 &mdash; with C. Jude</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.insee.fr/fr/statistiques/3135070?sommaire=3135098" target="_blank">An Assessment of the Effects of Unconventional Monetary Policies</a></div>
+          <div class="pub-meta"><em>Economie &amp; Statistique / Economics &amp; Statistics</em>, 2017 &mdash; with D. Kanga</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.tandfonline.com/doi/abs/10.1080/00036846.2016.1208350" target="_blank">Explaining and Forecasting Bank Loans: Good Times and Crisis</a></div>
+          <div class="pub-meta"><em>Applied Economics</em>, Vol. 49(8), 2017</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-d-economie-financiere-2016-3-p-147.htm" target="_blank">Désintermédier : pourquoi, comment, avec quelles conséquences ?</a></div>
+          <div class="pub-meta"><em>Revue d'Économie Financière</em>, n.123, 2016 &mdash; with J.-P. Pollin</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-francaise-d-economie-2014-2-p-245.htm" target="_blank">Cohérence et contenu en information des indicateurs du Bank Lending Survey pour la France</a></div>
+          <div class="pub-meta"><em>Revue Française d'Économie</em>, Vol. XXIX, 2014</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-francaise-d-economie-2013-4-page-49.htm" target="_blank">Les cibleurs d'inflation sont-ils monomaniaques ?</a></div>
+          <div class="pub-meta"><em>Revue Française d'Économie</em>, 2013 &mdash; with Y. Lucotte</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.e-jei.org/journal/view.php?number=2013600023" target="_blank">Addressing Financial Heterogeneity in a Monetary Union</a></div>
+          <div class="pub-meta"><em>Journal of Economic Integration</em>, Vol. 23(3), 2013 &mdash; with C. Badarau-Semescu</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0264999311001489" target="_blank">Assessing the Effects of Financial Heterogeneity in a Monetary Union: A DSGE Approach</a></div>
+          <div class="pub-meta"><em>Economic Modelling</em>, Vol. 28(6), 2011 &mdash; with C. Badarau-Semescu</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.insee.fr/fr/statistiques/1377159?sommaire=1377175" target="_blank">Les effets de richesse importent moins que les effets de bilan</a></div>
+          <div class="pub-meta"><em>Économie &amp; Statistique</em>, n.438-440, 2010</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title">Introduction to the Special Issue on Money, Banking and Finance</div>
+          <div class="pub-meta"><em>Brussels Economic Review</em>, Vol. 53, 2010 &mdash; with S. Galanti</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.emerald.com/jfep/article-abstract/1/4/319/212199/The-Fed-and-the-ECB-why-such-an-apparent?redirectedFrom=fulltext" target="_blank">The Fed and the ECB: Why such an Apparent Difference in Reactivity?</a></div>
+          <div class="pub-meta"><em>Journal of Financial Economic Policy</em>, Vol. 1(4), 2009 &mdash; with A. Penot</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-recherches-economiques-de-louvain-2009-4-page-425.htm" target="_blank">Bank Capital Channel and Counter-Cyclical Prudential Regulation in a DSGE Model</a></div>
+          <div class="pub-meta"><em>Louvain Economic Review</em>, n.75(4), 2009</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-de-l-ofce-2008-2-page-91.htm" target="_blank">Les Indicateurs des Conditions Monétaires permettent-ils de prévoir l'activité économique ?</a></div>
+          <div class="pub-meta"><em>Revue de l'OFCE</em>, n.105, 2008 &mdash; with C. Blot</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-economique-2006-1-page-85.htm" target="_blank">Règle de Taylor vs Règle-ICM : Application à la Zone Euro</a></div>
+          <div class="pub-meta"><em>Revue Économique</em>, Vol. 57(1), 2006</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-economie-internationale-2005-4-p-65.htm" target="_blank">Les banques comme vecteurs et amplificateurs des chocs financiers</a></div>
+          <div class="pub-meta"><em>International Economics</em>, n.104, 2005</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-de-l-ofce-2005-2-p-317.htm" target="_blank">Politique monétaire et prix d'actifs : quelles issues ?</a></div>
+          <div class="pub-meta"><em>Revue de l'OFCE</em>, n.93, 2005</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="http://www.jstor.org/stable/42904109" target="_blank">La neutralisation des mouvements et de l'impact des prix d'actifs : une revue de la littérature</a></div>
+          <div class="pub-meta"><em>Revue d'Économie Financière</em>, n.74, 2004</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.cairn.info/revue-d-economie-politique-2003-2-p-233.htm" target="_blank">Politique monétaire avec information de marché</a></div>
+          <div class="pub-meta"><em>Revue d'Économie Politique</em>, Vol. 113(2), 2003</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.persee.fr/doc/rfeco_0769-0479_2002_num_16_4_1520" target="_blank">Banques Centrales et prix d'actifs : une étude empirique</a></div>
+          <div class="pub-meta"><em>Revue Française d'Économie</em>, Vol. XVI(4), 2002</div>
+        </div>
+      </div>
+
+      <!-- WORKING PAPERS -->
+      <div class="section-label" id="wp">Working Papers</div>
+
+      <div class="wp-item">
+        <div class="wp-title"><a href="https://ssrn.com/abstract=5050773" target="_blank">Going Green: Will the R-star Shine Brighter?</a></div>
+        <div class="wp-meta">SSRN, 2026 &mdash; with M. Jezequel-Royer</div>
+      </div>
+
+      <div class="wp-item">
+        <div class="wp-title"><a href="https://ssrn.com/abstract=5151656" target="_blank">Mining and Institutional Quality in Latin America</a></div>
+        <div class="wp-meta">SSRN, 2025 &mdash; with S. Bacouel-Jentjens et al.</div>
+      </div>
+
+      <div class="wp-item">
+        <div class="wp-title">Energy Transition Metals and Economic Development in Latin America</div>
+        <div class="wp-meta">2025</div>
+      </div>
+
+      <div class="wp-item">
+        <div class="wp-title">Do Bankers Want Their Umbrellas Back When It Rains?</div>
+        <div class="wp-meta">INFER WP 2023.08 &nbsp;<span class="wp-status submitted">Submitted</span></div>
+      </div>
+
+      <!-- BOOK CHAPTERS -->
+      <div class="section-label" id="chapters">Book Chapters &amp; Reports</div>
+
+      <div class="chapter-item">
+        <div class="pub-title">
+          <a href="https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_acute_physical_impacts_from_climate_change_and_monetary_policy.pdf" target="_blank">
+            Acute Physical Impacts from Climate Change and Monetary Policy
+          </a>
+        </div>
+        <div class="pub-meta"><em>NGFS Technical Document</em>, 2024</div>
+      </div>
+
+      <div class="chapter-item" style="padding-top:.75rem">
+        <div class="pub-title">Financial Asymmetries, National Divergences and the Conduct of Monetary Policy in a Monetary Union</div>
+        <div class="pub-meta"><em>SUERF Study</em> 2011/3 &mdash; with C. Badarau-Semescu</div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+
+      <div class="sidebar-card">
+        <div class="card-title">On this page</div>
+        <div class="jump-nav">
+          <a href="#current">Current work</a>
+          <a href="#publications">Publications</a>
+          <a href="#wp">Working Papers</a>
+          <a href="#chapters">Book Chapters &amp; Reports</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Profiles</div>
+        <a class="slink" href="https://scholar.google.com/citations?user=jn9z0EQAAAAJ&hl=fr" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Google Scholar
+        </a>
+        <a class="slink" href="https://ideas.repec.org/f/ple354.html" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          IDEAS / RePec
+        </a>
+        <a class="slink" href="https://orcid.org/0000-0003-2152-0737" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          ORCID
+        </a>
+        <a class="slink" href="https://www.banque-france.fr/en/gregory-levieuge" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Banque de France page
+        </a>
+        <a class="cv-btn" href="CV_Levieuge_April26.pdf" target="_blank">Download CV (PDF)</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer>
+    <p class="disclaimer">Disclaimer: views expressed on this page and in the posted documents are my own and do not necessarily represent those of the Banque de France or the Eurosystem.</p>
+  </footer>
+
+</div>
+</body>
+</html>
