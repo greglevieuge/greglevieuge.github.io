@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grégory Levieuge – Croissance et fluctuations (M2 EIPMC)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100}
+.nav-name{font-family:'EB Garamond',serif;font-size:22px;letter-spacing:.02em}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#888}
+.nav-links a:hover,.nav-links a.active{color:#222}
+.nav-links a.active{border-bottom:1px solid #222;padding-bottom:2px}
+
+/* HERO */
+.hero{position:relative;height:340px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:brightness(.62)}
+.hero-overlay{position:absolute;bottom:2.4rem;left:3rem}
+.hero-title{font-family:'EB Garamond',serif;font-size:64px;font-weight:400;color:#fff;line-height:1.05}
+.hero-sub{font-size:13.5px;color:rgba(255,255,255,.75);letter-spacing:.08em;text-transform:uppercase;margin-top:.6rem}
+.photo-credit{position:absolute;bottom:.45rem;right:.9rem;font-size:10px;color:rgba(255,255,255,.4)}
+
+/* LAYOUT */
+.wrapper{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.main{display:grid;grid-template-columns:1fr 290px;gap:3.5rem;padding:3rem 0}
+
+/* INTRO */
+.intro-text{font-family:'EB Garamond',serif;font-size:19px;line-height:1.82;color:#222;margin-bottom:2.5rem}
+
+/* SECTIONS */
+.section-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;border-top:1px solid #eee;padding-top:1.1rem;margin:2.2rem 0 1rem}
+
+/* SEANCES */
+.seance{padding:1.15rem 0;border-bottom:1px solid #f0f0f0}
+.seance:last-child{border-bottom:none}
+.seance-num{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#1a5fa8;margin-bottom:.25rem}
+.seance-titre{font-family:'EB Garamond',serif;font-size:19px;color:#222;line-height:1.45}
+.seance-liens{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.75rem}
+.dl{display:inline-flex;align-items:center;gap:.5rem;font-size:13.5px;padding:.4rem .85rem;background:#f6f6f6;border:1px solid #ececec;color:#333;transition:background .15s,border-color .15s,color .15s}
+.dl:hover{background:#eef2f8;border-color:#c9d7e8;color:#1a5fa8}
+.dl svg{flex-shrink:0}
+.seance-note{font-size:13px;color:#888;margin-top:.5rem;font-style:italic}
+.a-venir{font-size:14px;color:#999;font-style:italic;padding:.9rem 0}
+
+/* SIDEBAR */
+.sidebar-card{border:1px solid #eee;padding:1.3rem 1.4rem;margin-bottom:1.5rem;background:#fafafa}
+.card-title{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#aaa;margin-bottom:1rem}
+.slink{display:flex;align-items:center;gap:.6rem;font-size:14px;color:#1a5fa8;margin-bottom:.65rem}
+.slink svg{flex-shrink:0}
+.info-line{font-size:14px;color:#555;line-height:1.9}
+.contact-line{font-size:14px;color:#555;line-height:1.9}
+
+/* FOOTER */
+footer{border-top:1px solid #eee;padding:1.5rem 0 2.5rem}
+.disclaimer{font-size:12.5px;color:#bbb;line-height:1.75;font-style:italic}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav{padding:.9rem 1.2rem}
+  .nav-name{font-size:18px}
+  .nav-links{gap:1.1rem}
+  .nav-links a{font-size:11px}
+
+  .hero{height:220px}
+  .hero-overlay{bottom:1.4rem;left:1.4rem}
+  .hero-title{font-size:32px}
+  .hero-sub{font-size:11px;margin-top:.35rem}
+
+  .wrapper{padding:0 1.2rem}
+  .main{grid-template-columns:1fr;gap:0;padding:1.8rem 0}
+
+  aside{margin-top:1rem}
+  .seance-titre{font-size:17px}
+  .disclaimer{font-size:12px}
+}
+
+@media (max-width: 480px) {
+  .hero-title{font-size:26px}
+  .hero{height:190px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Grégory Levieuge</span>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="levieuge_research.html">Research</a>
+    <a href="levieuge_policy.html">Policy</a>
+    <a href="levieuge_teaching.html" class="active">Teaching</a>
+    <a href="levieuge_supervision.html">Supervision</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <img src="Photos pour le site/Photo_classe.jpg" alt="Croissance et fluctuations">
+  <div class="hero-overlay">
+    <div class="hero-title">Croissance et fluctuations</div>
+    <div class="hero-sub">M2 EIPMC &middot; University Paris Nanterre &middot; 2026–2027</div>
+  </div>
+  <span class="photo-credit">&copy; G. Levieuge</span>
+</div>
+
+<div class="wrapper">
+  <div class="main">
+
+    <main>
+
+      <p class="intro-text">Cette page rassemble les documents du cours « Croissance et fluctuations », en sept séances. Pour chaque séance : le jeu de slides projeté, et le fascicule réunissant la bibliographie et les documents commentés en cours. Les fichiers sont déposés au fur et à mesure de l'année.</p>
+
+      <div class="section-label" id="seances">Documents par séance</div>
+
+      <!-- ============================================================
+           POUR AJOUTER UNE SÉANCE : copier le bloc ci-dessous, coller
+           juste en dessous, puis changer le numéro, le titre et les
+           deux noms de fichiers PDF. Rien d'autre.
+           Les PDF se déposent dans le dossier « Cours Nanterre ».
+           Dans les liens, chaque espace du nom de dossier s'écrit %20.
+           ============================================================ -->
+
+      <div class="seance">
+        <div class="seance-num">Séance 1</div>
+        <div class="seance-titre">Mesure, faits stylisés et le monde d'avant la croissance</div>
+        <div class="seance-liens">
+          <a class="dl" href="Cours%20Nanterre/Croissance_Fluctuations_Seance1.pdf" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            Slides (PDF)
+          </a>
+          <a class="dl" href="Cours%20Nanterre/Seance1_Doc_de_cours_biblio.pdf" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Bibliographie et documents (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== FIN DU BLOC SÉANCE ===== -->
+
+      <p class="a-venir">Les séances suivantes seront mises en ligne au fil de l'année.</p>
+
+      <div class="section-label" id="evaluation">Évaluation</div>
+      <p class="info-line">Devoir sur table, en trois types d'épreuve : questions de fond ; commentaire de documents (un graphique, un tableau ou un extrait d'article) ; exercice et analyse à partir des modèles du cours.</p>
+
+    </main>
+
+    <aside>
+      <div class="sidebar-card">
+        <div class="card-title">Sur cette page</div>
+        <a class="slink" href="#seances">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Documents par séance
+        </a>
+        <a class="slink" href="#evaluation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Évaluation
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Le cours</div>
+        <div class="info-line">
+          Master 2 EIPMC<br>
+          University Paris Nanterre<br>
+          Année universitaire 2026–2027<br>
+          Sept séances
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Navigation</div>
+        <a class="slink" href="levieuge_teaching.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Retour à Teaching
+        </a>
+        <a class="slink" href="index.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a5fa8" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Home
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-title">Contact</div>
+        <div class="contact-line">gregorylevieuge at gmail dot com</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p class="disclaimer">Disclaimer: views expressed on this page and in the posted documents are my own and do not necessarily represent those of the Banque de France or the Eurosystem.</p>
+  </footer>
+</div>
+
+</body>
+</html>
